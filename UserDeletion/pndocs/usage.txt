@@ -1,0 +1,32 @@
+Once installed users will be able to delete their own accounts.
+
+You will use this script at your own risk! 
+Sometimes using this module will cause errors in other modules 
+because they try to find user data that does not exist any more.
+
+If you - as admin - want to delete users, please use the UserDeletion
+admin interface. Do not use the admin interface of the Users module 
+any more!
+
+If you are a module developer and you want userdeletion to include
+your module in the deletion process take a look into the 
+pnuserdeletion.php file. Customize the file for the needs of your 
+module and place it in your modules folder.
+If there is a deletion request, all the pnuserdeletion.php files
+in all module directories will be used.
+
+You do not have to write some deletion routines in this file, you
+can also choose to anonymize the data.
+
+The return of the function in this file is an array that will be 
+used in the output the user or an administrator will see.
+
+And - I cannot say this enoug times - DO NOT TRY THE DELETION 
+ROUTING WITH YOUR ADMINISTRATION ACCOUNT! I WILL NOT ANSWER EMAILS
+LIKE "FU** I DELETED MY ADMIN ACCOUNT AND CANNOT LOGIN AS ADMIN 
+ANY MORE" ANY MORE! ;-)
+
+Have a lot of fun!
+
+Florian Schieﬂl / quan
+http://www.ifs-net.de
