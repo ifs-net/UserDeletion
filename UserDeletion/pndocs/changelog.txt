@@ -1,0 +1,9 @@
+Changelog for the userdeletion module
+
+0.20
+====
+- Please upgrade if you want to use the deletion function from pnLastLogin module
+
+0.10
+====
+- initial release

@@ -1,0 +1,13 @@
+<!--[admincategorymenu]-->
+
+<strong><!--[pngetstatusmsg|pnvarprephtmldisplay]--></strong>
+
+<h1><!--[pnml name="_USERDELETIONADMINPANEL"]--></h1>
+
+<form method="post" action="<!--[pnmodurl modname="UserDeletion" type="admin" func="main"]-->">
+<!--[pnml name="_USERDELETIONINTROTEXT"]--><br /><br />
+<!--[pnml name="_USERDELETIONEMAIL"]-->:<br />
+<input type="text" name="email" value="<!--[pnmodgetvar module="UserDeletion" name="email"]-->" /><br /><br />
+<input type="submit" value="<!--[pnml name="_USERDELETIONSUBMIT"]-->" />
+<input type="hidden" name="action" value="update" />
+</form>

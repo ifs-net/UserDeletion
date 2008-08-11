@@ -1,0 +1,20 @@
+<strong><!--[pngetstatusmsg|pnvarprephtmldisplay]--></strong>
+
+
+<h1><!--[pnml name="_USERDELETIONDHEADLINE"]--></h1>
+
+<br /><!--[pnml name="_USERDELETIONTEXT"]--><br /><br />
+
+<form method="post" action="<!--[pnmodurl modname="UserDeletion" type="user" func="delete"]-->" onsubmit="return confirm('<!--[pnml name="_USERDELETIONNOUNDO"]-->'\">
+<input type="hidden" name="authid" value="<!--[pnsecgenauthkey module="UserDeletion"]-->" /><br /><br />
+
+<!--[pnmodgetvar module="UserDeletion" name="email" assign="email"]-->
+<!--[if $email ne ""]-->
+<!--[pnml name="_USERDELETIONFEEDBACK"]--><br />
+<center>
+    <textarea name="feedback" rows="10" cols="50"></textarea>
+</center><br />
+<!--[/if]-->
+
+<center><input type="submit" value="<!--[pnml name="_USERDELETIONREALLYDELETE"]-->" /></center>
+</form>
