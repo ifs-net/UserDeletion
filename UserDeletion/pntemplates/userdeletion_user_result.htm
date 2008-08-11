@@ -1,0 +1,13 @@
+<strong><!--[pngetstatusmsg|pnvarprephtmldisplay]--></strong>
+
+
+<h1><!--[pnml name="_USERDELETIONDHEADLINE"]--></h1>
+
+<br /><!--[pnml name="_USERDELETIONDELETERESULT"]--><br /><br />
+
+<ul>
+<!--[foreach from=$output item="line"]-->
+	<li><strong><!--[$line.title]-->:</strong> <!--[$line.result]--></li>
+<!--[/foreach]-->
+</ul>
+<a href="<!--[pngetbaseurl]-->"><!--[pnml name="_USERDELETIONRETURNTOHOME"]--></a>

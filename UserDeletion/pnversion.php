@@ -2,11 +2,11 @@
 
 // The following information is used by the Modules module 
 // for display and upgrade purposes
-$modversion['name']           = 'pnUserDeletion';
+$modversion['name']           = 'UserDeletion';
 // the version string must not exceed 10 characters!
-$modversion['version']        = '0.20';
-$modversion['description']    = 'pnUserDeletion';
-$modversion['displayname']    = 'pnUserDeletion';
+$modversion['version']        = '1.0';
+$modversion['description']    = 'Offers your members the possibillity to delete their accounts themself';
+$modversion['displayname']    = 'UserDeletion';
 
 // The following in formation is used by the credits module
 // to display the correct credits
