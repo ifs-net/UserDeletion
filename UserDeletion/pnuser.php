@@ -22,12 +22,11 @@ function UserDeletion_user_main()
  */
 function UserDeletion_user_delete()
 {
-  /*
     if (!SecurityUtil::ConfirmAuthKey() || !pnUserLoggedIn()) {
 		LogUtil::registerPermissionError();
 		return pnRedirect(pnModURL('UserDeletion','user','main'));
     }
-*/
+
     // call the delete-function
     $output = pnModAPIFunc('UserDeletion','user','delete',array('uid' => pnUserGetVar('uid')));
 

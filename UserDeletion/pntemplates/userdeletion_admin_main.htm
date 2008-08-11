@@ -1,13 +1,37 @@
 <!--[admincategorymenu]-->
-
+<br />
 <strong><!--[pngetstatusmsg|pnvarprephtmldisplay]--></strong>
-
+<br />
 <h1><!--[pnml name="_USERDELETIONADMINPANEL"]--></h1>
 
-<form method="post" action="<!--[pnmodurl modname="UserDeletion" type="admin" func="main"]-->">
-<!--[pnml name="_USERDELETIONINTROTEXT"]--><br /><br />
-<!--[pnml name="_USERDELETIONEMAIL"]-->:<br />
-<input type="text" name="email" value="<!--[pnmodgetvar module="UserDeletion" name="email"]-->" /><br /><br />
-<input type="submit" value="<!--[pnml name="_USERDELETIONSUBMIT"]-->" />
-<input type="hidden" name="action" value="update" />
-</form>
+<!--[if $uname ne ""]-->
+
+	<strong><!--[pnml name="_USERDELETIONREALLYDELETE"]-->: <!--[$uname|userprofilelink]--></strong>
+	<br /><br />
+	<a href="<!--[pnmodurl modname="UserDeletion" type="admin" func="main" action="delete" uid=$uid authid=$authid]-->"><!--[pnml name="_USERDELETIONDELETEUSER"]-->: <!--[$uname]--></a>.
+	<br /><br />
+	<a href="<!--[pnmodurl modname="UserDeletion" type="admin" func="main"]-->"><!--[pnml name="_USERDELETIONCANCEL"]--></a>.
+	<br /><br />
+
+<!--[else]-->
+	
+	<form method="post" action="<!--[pnmodurl modname="UserDeletion" type="admin" func="main"]-->">
+	<!--[pnml name="_USERDELETIONINTROTEXT"]--><br /><br />
+	<!--[pnml name="_USERDELETIONEMAIL"]-->:<br />
+	<input type="text" name="email" value="<!--[$email]-->" /><br /><br />
+	<input type="submit" value="<!--[pnml name="_USERDELETIONSUBMIT"]-->" />
+	<input type="hidden" name="authid" value="<!--[$authid]-->" />
+	<input type="hidden" name="action" value="email" />
+	</form>
+	
+	<br /><br />
+	<form method="post" action="<!--[pnmodurl modname="UserDeletion" type="admin" func="main"]-->">
+	<!--[pnml name="_USERDELETIONDELETEUSER"]-->:<br />
+	<input type="text" name="uname" /><br /><br />
+	<input type="submit" value="<!--[pnml name="_USERDELETIONDELBUTTON"]-->" />
+	<input type="hidden" name="authid" value="<!--[$authid]-->" />
+	<input type="hidden" name="action" value="delete" />
+	</form>
+	<br /><br />
+
+<!--[/if]-->

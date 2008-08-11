@@ -11,5 +11,9 @@ define('_USERDELETIONUSERDATA',		'Ein Benutzer hat sich gelöscht. Hier seine Dat
 define('_USERDELETIONMAILFEEDBACK',	'Inhalt des Feedback-Feldes beim Löschvorgang');
 define('_USERDELETIONMAILFOOTER',	'Der Benutzer und alle dazugehörigen Daten sind nun entfernt.');
 define('_USERDELETIONMAILSUBJECT',	'Ein Benutzer hat sich gelöscht!');
-
+// new:
+define('_NOTHINGDELETEDNOAUTH',		'aufgrund fehlernder Zugriffsrechte wurden keine Daten gelöscht');
+define('_USERDELETIONRETURNTOHOME',	'Weiter zur Startseite');
+define('_USERDELETIONDELETERESULT',	'Ergebnis des Löschantrags');
+define('_USERDELETIONBACKTOADMIN',	'Zurück zum Administrationsinterface');
 ?>

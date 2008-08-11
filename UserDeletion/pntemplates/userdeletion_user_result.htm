@@ -4,10 +4,14 @@
 <h1><!--[pnml name="_USERDELETIONDHEADLINE"]--></h1>
 
 <br /><!--[pnml name="_USERDELETIONDELETERESULT"]--><br /><br />
-
 <ul>
 <!--[foreach from=$output item="line"]-->
 	<li><strong><!--[$line.title]-->:</strong> <!--[$line.result]--></li>
 <!--[/foreach]-->
 </ul>
-<a href="<!--[pngetbaseurl]-->"><!--[pnml name="_USERDELETIONRETURNTOHOME"]--></a>
+<!--[if $admin eq "1"]-->
+	<a href="<!--[pnmodurl modname="UserDeletion" type="admin" func="main"]-->"><!--[pnml name="_USERDELETIONBACKTOADMIN"]--></a>
+<!--[else]-->
+	<a href="<!--[pngetbaseurl]-->"><!--[pnml name="_USERDELETIONRETURNTOHOME"]--></a>
+<!--[/if]-->
+<br /><br />

@@ -15,4 +15,5 @@ define('_USERDELETIONMAILSUBJECT',	'An account was deleted!');
 define('_NOTHINGDELETEDNOAUTH',		'nothing deleted by this module because you do not have permission to delete data');
 define('_USERDELETIONRETURNTOHOME',	'Return to index page');
 define('_USERDELETIONDELETERESULT',	'This is the result from the deletion routine');
+define('_USERDELETIONBACKTOADMIN',	'Back to admin interface');
 ?>
