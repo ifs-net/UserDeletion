@@ -1,4 +1,12 @@
 <?php
+/**
+ * @package      UserDeletion
+ * @version      $Id$
+ * @author       Florian Schießl
+ * @link         http://www.ifs-net.de
+ * @copyright    Copyright (C) 2008
+ * @license      http://www.gnu.org/copyleft/gpl.html GNU General Public License
+ */
 
 /**
  * the main administration function
@@ -32,7 +40,10 @@ function UserDeletion_admin_main()
       	  	// we'll use the user part of this module so we have to laod the language files
       	  	pnModLangLoad('UserDeletion','user');
 		    // call the delete-function
-		    $output = pnModAPIFunc('UserDeletion','user','delete',array('uid' => $uid));
+		    $output = pnModAPIFunc('UserDeletion','user','delete',array(
+				'uid' 		=> $uid,
+				'admin' 	=> 1
+				));
 		
 		    // create output
 		    $render = pnRender::getInstance('UserDeletion');
@@ -51,6 +62,7 @@ function UserDeletion_admin_main()
 		      	$render->assign('uid',		$uid);
 		      	$render->assign('uname',	pnUserGetVar('uname',$uid));
 		    }
+		    else Logutil::registerError(_USERDELETIONUSERNOTFOUND);
 	    }
     }
     // assign data
