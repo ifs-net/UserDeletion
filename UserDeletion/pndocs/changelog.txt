@@ -1,5 +1,13 @@
 Changelog for the userdeletion module
 
+svn:
+====
+- new icon set
+
+1.0
+===
+- new module api
+
 0.20
 ====
 - Please upgrade if you want to use the deletion function from pnLastLogin module
