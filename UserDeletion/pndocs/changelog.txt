@@ -3,6 +3,7 @@ Changelog for the userdeletion module
 svn:
 ====
 - new icon set
+- added live version check
 
 1.0
 ===
