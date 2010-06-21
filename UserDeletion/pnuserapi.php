@@ -7,13 +7,13 @@
  * @copyright    Copyright (C) 2008
  * @license      http://www.gnu.org/copyleft/gpl.html GNU General Public License
  */
- 
+
 /**
  * delete user
  *
  * This function deletes the actual user
- * 
- * @return   array   
+ *
+ * @return   array
  */
 function UserDeletion_userapi_delete($args)
 {
@@ -38,10 +38,10 @@ function UserDeletion_userapi_delete($args)
 	}
 
 	$uname = pnUserGetVar('uname',$uid);
-	// No we'll do the things the Users-Admin-deleteUser function does 
+	// No we'll do the things the Users-Admin-deleteUser function does
 	DBUtil::deleteObjectByID('group_membership', 	$uid, 'uid');
 	DBUtil::deleteObjectByID('users', 				$uid, 'uid');
-	DBUtil::deleteObjectByID('user_data', 			$uid, 'uda_uid');
+//	DBUtil::deleteObjectByID('user_data', 			$uid, 'uda_uid');
 	// Let other modules know we have deleted an item
     pnModCallHooks('item', 'delete', $uid, array('module' => 'Users'));
     // Add output
@@ -73,9 +73,9 @@ function UserDeletion_userapi_delete($args)
 /**
  * security check
  *
- * This functions make a little security check. Accounts should 
+ * This functions make a little security check. Accounts should
  * only be deleted by any person having the ACCESS_DELETE permission
- * for the UserDeletion module or if the person wants to delete the own 
+ * for the UserDeletion module or if the person wants to delete the own
  * account.
  *
  * @param 	$args['uid']	int
